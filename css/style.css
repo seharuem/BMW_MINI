@@ -1,0 +1,882 @@
+body,
+html {
+	height: 100%;
+	background: #0f0f0f;
+}
+body {
+	-ms-overflow-style: none;
+}
+body::-webkit-scrollbar {
+	display: none;
+}
+a {
+	text-decoration: none;
+}
+p,
+a,
+span,
+li {
+	color: white;
+}
+
+/* 로딩 */
+#load_wrap {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+}
+#logo {
+	width: 100%;
+	height: 100%;
+	background: url(/BMW_MINI/images/logo.svg) center / contain no-repeat;
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+#logo_mi {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(/BMW_MINI/images/logo_mi.svg) center / contain no-repeat;
+}
+#logo_ni {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(/BMW_MINI/images/logo_ni.svg) center / contain no-repeat;
+}
+
+/* 첫번째 비디오 */
+#video1_wrap {
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	display: none;
+	mask: url(/BMW_MINI/images/circle.svg) center no-repeat;
+	mask-size: contain;
+	-webkit-mask: url(/BMW_MINI/images/circle.svg) center no-repeat;
+	-webkit-mask-size: contain;
+}
+#video1 {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* 역사 시작 */
+#history_wrap {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	background: #0f0f0f;
+	display: none;
+	margin-top: -100vh;
+}
+#history1 {
+	z-index: 33;
+	width: 100%;
+	height: 100%;
+	background: url(/BMW_MINI/images/history1.jpg) center / cover no-repeat;
+}
+
+/* 역사 두번째 */
+#history2 {
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	background: #0f0f0f;
+	display: flex;
+	justify-content: center;
+}
+#history_list {
+	width: 2000px;
+	height: 100%;
+	position: relative;
+	z-index: 2;
+}
+#history_list li {
+	width: 460px;
+	height: 460px;
+	opacity: 0.1;
+	background: center top / contain no-repeat;
+	position: absolute;
+}
+#history_list li:nth-child(odd) {
+	top: 10%;
+}
+#history_list li:nth-child(even) {
+	top: 55%;
+	background-position-y: 40%;
+}
+#history_list li:nth-child(1) {
+	background-image: url(/BMW_MINI/images/history_car1.png);
+	width: 600px;
+	transform: translateY(-10%);
+}
+#history_list li:nth-child(2) {
+	background-image: url(/BMW_MINI/images/history_car2.png);
+	right: 50%;
+}
+#history_list li:nth-child(3) {
+	background-image: url(/BMW_MINI/images/history_car3.png);
+	left: 50%;
+}
+#history_list li:nth-child(4) {
+	background-image: url(/BMW_MINI/images/history_car4.png);
+	transform: translate(-5%);
+	right: 5%;
+	width: 500px;
+}
+#history_list #light {
+	position: absolute;
+	top: 12%;
+	left: 3%;
+	width: 280px;
+	height: 280px;
+	border-radius: 50%;
+	background: #999;
+	filter: blur(80px);
+	opacity: 0;
+	transform: translate(30%);
+	z-index: -1;
+}
+
+/* 역사 세번째 */
+#history3 {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	gap: 200px;
+}
+#history3_text {
+	font-family: 'DM Serif Text';
+	word-break: keep-all;
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+.history3_title {
+	font-size: 48px;
+}
+#history3_text span {
+	position: relative;
+	z-index: 1;
+}
+#history3_text span::after {
+	content: '';
+	background: red;
+	width: 100%;
+	height: 20px;
+	position: absolute;
+	bottom: 8px;
+	left: 0;
+	z-index: -1;
+}
+.history3_text {
+	width: 800px;
+	font-size: 24px;
+	text-align: justify;
+}
+#history3_img {
+	width: 20%;
+	height: 50%;
+	position: relative;
+}
+#history3_img img {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	object-fit: cover;
+	transition: 0.3s;
+	display: none;
+	opacity: 0;
+	filter: brightness(0.7);
+	animation: ani 0.5s ease-out both;
+}
+#history3_img img:nth-child(1) {
+	top: 140px;
+	right: -80px;
+	transform: rotate(8deg);
+}
+#history3_img img:nth-child(2) {
+	right: 20px;
+	top: 20px;
+	transform: rotate(4deg);
+	animation-delay: 0.5s;
+}
+#history3_img img:nth-child(3) {
+	top: -100px;
+	right: 120px;
+	animation-delay: 1s;
+}
+@keyframes ani {
+	from {
+		opacity: 0;
+		transform: scale(2);
+	}
+}
+
+/* 연도 시작 */
+#history4 {
+	width: 100%;
+	height: 100vh;
+}
+#year_line_x {
+	width: 80%;
+	height: 2px;
+	background-color: red;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.history4_year {
+	font: 40px 'DM Serif Text';
+}
+.history4_text {
+	font: 300 16px Pretendard;
+}
+.year_list span {
+	color: red;
+}
+.year_text_wrap {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 28px 0;
+	opacity: 0;
+}
+.year_list {
+	position: absolute;
+	top: 50%;
+	width: max-content;
+}
+.year_list::after {
+	content: '';
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	border: 2px solid red;
+	background: #0f0f0f;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+	box-sizing: border-box;
+}
+.year_list.win::after {
+	background: red;
+}
+.year_line_y {
+	width: 2px;
+	height: 100px;
+	background-color: red;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+	opacity: 0;
+}
+.year_list:nth-child(odd) {
+	margin-top: -94px;
+	transform: translate(-50%, -100%);
+	.year_line_y {
+		top: calc(100% - 5px);
+		clip-path: inset(100% 0 0 0);
+	}
+	.year_text_wrap {
+		clip-path: inset(100% 0 0 0);
+	}
+}
+.year_list:nth-child(odd)::after {
+	bottom: -104px;
+}
+.year_list:nth-child(even) {
+	margin-top: 84px;
+	transform: translate(-50%);
+	.year_line_y {
+		top: -84px;
+		clip-path: inset(0 0 100% 0);
+	}
+	.year_text_wrap {
+		clip-path: inset(0 0 100% 0);
+	}
+}
+.year_list:nth-child(even)::after {
+	top: -94px;
+}
+/* 역사 끝 */
+
+/* 뉴 쿠퍼 영역 시작 */
+#new_cooper {
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 60px;
+}
+#new_cooper_title {
+	font: 500 48px 'DM Serif Text';
+}
+#new_cooper_box {
+	width: 100%;
+	height: 60%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 60px;
+}
+#new_cooper_info {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+#new_cooper_name {
+	font: 700 30px 'pretendard';
+	padding-left: 16%;
+}
+#new_cooper_info_list {
+	display: flex;
+	gap: 20px;
+	width: 660px;
+}
+#new_list {
+	width: 40%;
+	font: 400 20px 'pretendard';
+	text-align: right;
+}
+#new_list_value {
+	width: 60%;
+	font: 200 20px 'pretendard';
+	position: relative;
+}
+#new_list_value ul {
+	position: absolute;
+}
+#new_cooper_img {
+	position: relative;
+	width: 600px;
+	height: 100%;
+	overflow: hidden;
+}
+#new_cooper_img img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+#new_cooper_video_wrap {
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	position: relative;
+	z-index: 99;
+}
+#new_cooper_video {
+	width: 100%;
+	height: 120%;
+	object-fit: cover;
+	object-position: center;
+}
+/* 뉴 쿠퍼 영역 끝 */
+
+/* 뉴 미니 블라인드 시작 */
+#new_mini {
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+	flex-shrink: 0;
+	margin-top: -200vh;
+	z-index: 33;
+}
+.new_mask {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.new_mini_text {
+	font: normal 80px 'pretendard';
+	font-weight: 800;
+}
+#new_black {
+	background: #0f0f0f;
+	z-index: 1;
+}
+#new_red {
+	background: #e5001c;
+	clip-path: inset(100% 0 0 0);
+	z-index: 2;
+}
+#new_red p {
+	color: #000;
+}
+
+/* 뉴 클럽맨 영역 시작 */
+#new_clubman_container {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	overflow-x: hidden;
+	margin-top: -200vh;
+}
+#new_clubman_bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url('/BMW_MINI/images/clubman_bg.png') no-repeat center / cover;
+	z-index: 1;
+}
+#new_clubman_text_wrap {
+	width: 1400px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 11;
+}
+.new_clubman_title {
+	font: 700 48px 'pretendard';
+	margin-bottom: 40px;
+}
+.new_clubman_info {
+	font: 600 24px/30px 'pretendard';
+}
+
+#new_clubman {
+	display: flex;
+	position: relative;
+	flex-shrink: 0;
+	z-index: 99;
+	align-items: center;
+	justify-content: center;
+}
+.new_clubman_list {
+	width: auto;
+	height: 484px;
+	display: flex;
+	gap: 200px;
+	position: relative;
+	z-index: 10;
+	left: 100vw;
+}
+.new_clubman_list li {
+	width: 605px;
+	height: 484px;
+}
+.new_clubman_list li img {
+	width: 605px;
+	height: 408px;
+	border-radius: 4px;
+}
+.new_clubman_text {
+	font: normal 30px 'dm serif text';
+	text-align: center;
+	margin-top: 35px;
+}
+/* 뉴 클럽맨 영역 끝 */
+
+/* 뉴 미니 패밀리 영역시작 */
+#new_family {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	margin-top: -200vh;
+	z-index: -1;
+}
+#new_mini_family_bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url('/BMW_MINI/images/new_mini_family_bg.png') no-repeat center /
+		cover;
+	display: none;
+}
+#new_mini_family_text_wrap {
+	width: 1400px;
+	position: absolute;
+	top: 70%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 11;
+	opacity: 0;
+}
+.new_mini_family_title {
+	font: 700 48px 'pretendard';
+	margin-bottom: 50px;
+	text-align: center;
+}
+.new_mini_family_info {
+	font: 600 24px/30px 'pretendard';
+}
+/* 뉴 미니 패밀리 영역 끝 */
+
+/* 5 door 영역 시작*/
+#new_video_5door_wrap {
+	width: 100%;
+	height: 100vh;
+}
+.new_video_5door {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+#new_5door_info_wrap {
+	width: 100vw;
+	height: 100vh;
+	background: url('/BMW_MINI/images/5door_img0.png') center / cover no-repeat;
+	display: flex;
+	justify-content: center;
+}
+.new_5door_info {
+	width: 80%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 40px;
+}
+#new_5door_title_wrap {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.new_5door_title {
+	font: 48px 'DM Serif Text';
+}
+.new_5door_subtitle {
+	font: 34px 'DM Serif Text';
+}
+.new_5door_text {
+	font: 24px/30px pretendard;
+}
+.new_5door_title span {
+	position: relative;
+}
+.new_5door_title span::before {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 20px;
+	background: #57c4e5;
+	position: absolute;
+	z-index: -1;
+	left: 0;
+	bottom: 8px;
+}
+
+#new_5door_img_wrap {
+	width: 100vw;
+	height: 100vh;
+	background: url('/BMW_MINI/images/5door_img1.png') no-repeat center;
+	background-size: cover;
+}
+
+/* 5door 인트로 */
+.new_5door_intro_wrap {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: white;
+}
+.new_5door_intro {
+	width: 1400px;
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 80px;
+}
+.new_5door_intro_text_wrap {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+.new_5door_intro_title {
+	font-size: 48px;
+	font-family: DM Serif Text;
+	color: #000;
+	position: relative;
+	z-index: 1;
+}
+.new_5door_intro_title span {
+	position: relative;
+	color: #000;
+}
+.new_5door_intro_title span::before {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 20px;
+	background: #57c3e7;
+	position: absolute;
+	bottom: 8px;
+	left: 0;
+	z-index: -1;
+}
+.new_5door_intro_text {
+	font: normal 20px/30px 'pretendard';
+	color: #000;
+	text-align: justify;
+}
+.new_5door_intro_img {
+	width: 500px;
+	object-fit: contain;
+}
+
+/* 5door 디테일  */
+#new_5door_detail_wrap {
+	height: 100vh;
+	overflow: hidden;
+}
+.new_5door_detail_list {
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+.new_5door_detail_list li {
+	overflow: hidden;
+}
+.new_5door_detail_list li img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+/* 5door 영역 끝*/
+
+/* 슬로건 시작 */
+#slogan_home_wrap {
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+	z-index: 4;
+}
+.slogan_box {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 60px;
+}
+.slogan_box img {
+	width: 80%;
+	height: 50%;
+	object-fit: contain;
+}
+.slogan_box p {
+	font: bold 8vw 'pretendard';
+}
+#slogan_is_wrap {
+	z-index: 3;
+	background: black;
+}
+#slogan_is_wrap span {
+	color: #970e12;
+}
+#slogan_big_wrap {
+	background: #970e12;
+	z-index: 2;
+}
+#slogan_big_wrap span {
+	color: black;
+}
+#slogan_nice_wrap {
+	z-index: 1;
+	background: black;
+}
+
+/* JCW 소개 시작 */
+#jcw_big_wrap {
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	margin-top: -100vh;
+	background: black;
+}
+#jcw_wrap {
+	width: 600vw;
+	height: 100vh;
+	display: flex;
+}
+#jcw_main_wrap {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+#jcw_main_text_wrap {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 50%;
+	gap: 36px;
+}
+#jcw_main_title_wrap {
+	display: flex;
+	flex-direction: column;
+}
+#jcw_main_title {
+	font: 500 48px 'DM Serif Text';
+	text-align: left;
+}
+#jcw_sub_title {
+	font: 200 34px 'DM Serif Text';
+	text-align: left;
+}
+#jcw_sub_text {
+	width: 920px;
+	font: 200 15px/25px 'pretendard';
+	text-align: left;
+}
+#jcw_main_img {
+	width: 100%;
+}
+/* JCW 소개 끝 */
+
+/* JCW 디테일 시작 */
+.jcw_detail_box {
+	height: 100%;
+	text-align: center;
+	flex-basis: 100vw;
+	flex-shrink: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 120px;
+}
+.jcw_detail_text_box {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 24px;
+}
+.jcw_detail_title {
+	font: normal 48px 'DM Serif Text';
+}
+.jcw_detail_text {
+	width: 970px;
+	font: 200 15px 'pretendard';
+}
+.jcw_detail_img {
+	height: 45%;
+	object-fit: contain;
+}
+/* JCW 디테일 끝 */
+
+/* JCW 영상 시작 */
+#jwc_video_wrap {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+}
+#jwc_video {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+/* JCW 영상 끝 */
+
+/* 푸터시작 */
+footer {
+	width: 100%;
+	height: 250px;
+	padding-top: 28px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	gap: 60px;
+	align-items: center;
+}
+#footer_list {
+	display: flex;
+	justify-content: space-between;
+	gap: 120px;
+}
+#footer_list li a {
+	font: 400 15px 'pretendard';
+}
+#copyright {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+}
+#footer_logo {
+	width: 100px;
+}
+#footer_text {
+	font: normal 20px 'pretendard';
+	text-align: center;
+}
+
+/* 푸터끝 */
+
+/* 미디어쿼리 시작 */
+@media screen and (max-width: 1500px) {
+	#jcw_main_title {
+		font: 500 40px 'DM Serif Text';
+	}
+	#jcw_sub_title {
+		font: 400 30px 'DM Serif Text';
+	}
+	#jcw_sub_text {
+		font: 200 12px/20px 'pretendard';
+	}
+}
+@media screen and (max-width: 1300px) {
+	#jcw_main_title {
+		font: 500 32px 'DM Serif Text';
+	}
+	#jcw_sub_title {
+		font: 400 22px 'DM Serif Text';
+	}
+	#jcw_sub_text {
+		font: 200 12px/20px 'pretendard';
+	}
+}
+@media screen and (max-width: 1060px) {
+	#jcw_main_title {
+		font: 500 32px 'DM Serif Text';
+	}
+	#jcw_sub_title {
+		font: 400 22px 'DM Serif Text';
+	}
+	#jcw_sub_text {
+		font: 200 12px/20px 'pretendard';
+	}
+}

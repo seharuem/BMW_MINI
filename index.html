@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>MINI</title>
+
+		<!-- 폰트 -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+			rel="stylesheet"
+			as="style"
+			crossorigin
+		/>
+
+		<!-- 스타일 -->
+		<link rel="stylesheet" href="/BMW_MINI/css/reset.css" />
+		<link rel="stylesheet" href="/BMW_MINI/css/style.css" />
+
+		<!-- 플러그인 -->
+		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+
+		<!-- 스크립트 -->
+		<script src="/BMW_MINI/js/load.js" type="module" defer></script>
+		<script src="/BMW_MINI/js/mini.js" defer></script>
+	</head>
+
+	<body>
+		<!-- 로드 시작 -->
+		<section id="load_wrap">
+			<div id="video1_wrap">
+				<video id="video1" autoplay loop muted>
+					<source src="/BMW_MINI/video/load_video.mp4" type="video/mp4" />
+				</video>
+			</div>
+			<div id="logo"></div>
+			<div id="logo_mi"></div>
+			<div id="logo_ni"></div>
+		</section>
+
+		<!-- 역사 1 2 3 시작 -->
+		<section id="history_wrap">
+			<section id="history1"></section>
+			<section id="history2">
+				<ul id="history_list">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li id="light"></li>
+				</ul>
+			</section>
+			<section id="history3">
+				<div id="history3_text">
+					<p class="history3_title">
+						<span>MONTE CARLO RALLY 1964.</span>
+						<br>
+						WHERE THE MINI MAGIC BEGAN.
+					</p>
+					<p class="history3_text">
+						When Patrick Hopkirk crossed the Monégasque finish line 60 years
+						ago, the whole racing world held its breath. After a 22-kilometre
+						battle in the most adverse weather conditions, the Tartan Red Mini
+						Cooper S had unexpectedly prevailed against the overwhelming crowd
+						of competitors – heralding a triumphant winning streak that echoes
+						to the present day.
+						<br />
+						What was the Classic Mini’s secret to outdoing all 276 adversaries?
+						We went in search of the answers, to find out what the Cooper
+						bloodline has to do with it, and why the thrill of the past can
+						still be felt in the newest generation of MINI. Perhaps Charles
+						‘Charlie’ Cooper – the fourth racing fanatic in the family – has the
+						fascinating backstory we seek.
+					</p>
+				</div>
+				<div id="history3_img">
+					<img src="/BMW_MINI/images/history_stack1.jpg" alt="" />
+					<img src="/BMW_MINI/images/history_stack2.jpg" alt="" />
+					<img src="/BMW_MINI/images/history_stack3.jpg" alt="" />
+				</div>
+			</section>
+		</section>
+		<!-- 역사 1 2 3 끝 -->
+
+		<!-- 역사 4 연도 시작 -->
+		<section id="history4">
+			<div id="year_line_x"></div>
+			<ul>
+				<li class="year_list">
+					<div class="year_text_wrap">
+						<p class="history4_year">1962</p>
+						<p class="history4_text">
+							Driver: Pat Moss
+							<br />
+							Co-driver: Ann Wisdom
+							<br />
+							Result: Ladies' Award
+						</p>
+					</div>
+					<div class="year_line_y"></div>
+				</li>
+				<li class="year_list">
+					<div class="year_text_wrap">
+						<p class="history4_year">1963</p>
+						<p class="history4_text">
+							Driver: Rauno Aaltonen
+							<br />
+							Co-driver: Tony Ambrose
+							<br />
+							Result: 3rd place
+						</p>
+					</div>
+					<div class="year_line_y"></div>
+				</li>
+				<li class="year_list win">
+					<div class="year_text_wrap">
+						<p class="history4_year">1964</p>
+						<p class="history4_text">
+							Driver: Paddy Hopkirk
+							<br />
+							Co-driver: Henry Liddon
+							<br />
+							<span>Result: Winner</span>
+							<br />
+							Driver: Timo Mäkinen
+							<br />
+							Co-driver: Patrick Vanson
+							<br />
+							Result: 4th place
+						</p>
+					</div>
+					<div class="year_line_y"></div>
+				</li>
+				<li class="year_list win">
+					<div class="year_text_wrap">
+						<p class="history4_year">1965</p>
+						<p class="history4_text">
+							Driver: Timo Mäkinen
+							<br />
+							Co-driver: Paul Easter
+							<br />
+							<span>Result: Winner</span>
+						</p>
+					</div>
+					<div class="year_line_y"></div>
+				</li>
+				<li class="year_list win">
+					<div class="year_text_wrap">
+						<p class="history4_year">1965</p>
+						<p class="history4_text">
+							Driver: Timo Mäkinen
+							<br />
+							Co-driver: Paul Easter
+							<br />
+							<span>Result: Winner</span>
+						</p>
+					</div>
+					<div class="year_line_y"></div>
+				</li>
+				<li class="year_list">
+					<div class="year_text_wrap">
+						<p class="history4_year">1966</p>
+						<p class="history4_text">
+							Drivers: Timo Mäkinen,
+							<br />
+							Rauno Aaltonen, Paddy Hopkirk
+							<br />
+							Co-drivers: Paul Easter,
+							<br />
+							Tony Ambrose, Henry Liddon
+							<br />
+							Result: Disqualified (all entries)
+						</p>
+					</div>
+					<div class="year_line_y"></div>
+				</li>
+				<li class="year_list win">
+					<div class="year_text_wrap">
+						<p class="history4_year">1967</p>
+						<p class="history4_text">
+							Driver: Rauno Aaltonen
+							<br />
+							Co-driver: Henry Liddon
+							<br />
+							<span>Result: Winner</span>
+						</p>
+					</div>
+					<div class="year_line_y"></div>
+				</li>
+				<li class="year_list">
+					<div class="year_text_wrap">
+						<p class="history4_year">1968</p>
+						<p class="history4_text">
+							Driver: Rauno Aaltonen
+							<br />
+							Co-driver: Henry Liddon
+							<br />
+							Result: 3rd place
+							<br />
+							Driver: Tony Fall
+							<br />
+							Co-driver: Mike Wood
+							<br />
+							Result: 4th place
+						</p>
+					</div>
+					<div class="year_line_y"></div>
+				</li>
+				<li class="year_list">
+					<div class="year_text_wrap">
+						<p class="history4_year">2012</p>
+						<p class="history4_text">
+							MINI returned to the
+							<br />
+							Monte Carlo Rally under BMW
+							<br />
+							ownership, with MINI
+							<br />
+							John Cooper Works WRC.
+						</p>
+					</div>
+					<div class="year_line_y"></div>
+				</li>
+				<li class="year_list">
+					<div class="year_text_wrap">
+						<p class="history4_year">2013</p>
+						<p class="history4_text">
+							MINI competed again with the
+							<br />
+							MINI John Cooper Works
+							<br />
+							WRC.
+						</p>
+					</div>
+					<div class="year_line_y"></div>
+				</li>
+				<li class="year_list">
+					<div class="year_text_wrap">
+						<p class="history4_year">2014</p>
+						<p class="history4_text">
+							MINI last participated in
+							<br />
+							the Monte Carlo Rally.
+						</p>
+					</div>
+					<div class="year_line_y"></div>
+				</li>
+			</ul>
+		</section>
+
+		<!-- 뉴 쿠퍼 영역 시작 -->
+		<section id="new_cooper">
+			<p id="new_cooper_title">
+				THE RALLY COOPER COMPARED TO THE LATEST MINI COOPER S.
+			</p>
+
+			<div id="new_cooper_box">
+				<div id="new_cooper_info">
+					<p id="new_cooper_name">MINI COOPER S (1964)</p>
+
+					<div id="new_cooper_info_list">
+						<ul id="new_list">
+							<li>ENGINE</li>
+							<li>DISPLACEMENT</li>
+							<li>ENGINE PERFORMANCE</li>
+							<li>TORQUE</li>
+							<li>TRANSMISSON</li>
+							<li>ACCELERATION (0-62 MPH)</li>
+							<li>TOP SPEED</li>
+							<li>WHEELBASE</li>
+							<li>KERB WEIGHT</li>
+						</ul>
+
+						<div id="new_list_value">
+							<ul>
+								<li>4-cylinder</li>
+								<li>1071 ㎤</li>
+								<li>51kW (70hp)</li>
+								<li>86 Nm</li>
+								<li>4-seppd, front-wheel drive</li>
+								<li>12.9 s</li>
+								<li>160 km/h</li>
+								<li>2040 mm</li>
+								<li>635 kg</li>
+							</ul>
+							<ul>
+								<li>4-cylinder</li>
+								<li>1998 ㎤</li>
+								<li>150kW (204hp)</li>
+								<li>300 Nm</li>
+								<li>7-seppd(automatic), front-wheel drive</li>
+								<li>6.6s</li>
+								<li>242 km/h</li>
+								<li>2495 mm</li>
+								<li>1360kg</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div id="new_cooper_img">
+					<img src="/BMW_MINI/images/mini_cooper1964.png" alt="" />
+					<img src="/BMW_MINI/images/mini_cooper2024.png" alt="" />
+				</div>
+			</div>
+		</section>
+
+		<section id="new_cooper_video_wrap">
+			<video id="new_cooper_video" autoplay muted>
+				<source src="/BMW_MINI/video/jcw_video.mp4" type="video/mp4" />
+			</video>
+		</section>
+		<!-- 뉴 쿠퍼 영역 끝 -->
+
+		<!-- 미니 텍스트 백그라운드 변경 시작 -->
+		<section id="new_mini">
+			<div id="new_black" class="new_mask">
+				<p class="new_mini_text">MINI</p>
+			</div>
+			<div id="new_red" class="new_mask">
+				<p class="new_mini_text">MINI</p>
+			</div>
+		</section>
+
+		<!-- 뉴 클럽맨 영역 시작 -->
+		<div id="new_clubman_container">
+			<div id="new_clubman_bg"></div>
+			<div id="new_clubman_text_wrap">
+				<p class="new_clubman_title">The History of the MINI Clubman.</p>
+				<p class="new_clubman_info">
+					Everyone knows the MINI Clubman. Introduced in 2007 as the third
+					variant of the relaunched MINI, it has become known and loved for many
+					things, most notably its unique split rear doors. But this wasn’t the
+					Clubman’s first appearance. Its debut actually came in 1969, when it
+					was produced in multiple versions, one being the Clubman Estate. Back
+					then it was intended to represent a new, more mature Mini. Did it
+					succeed? It did and it didn’t. But that’s just one part of its
+					exciting story. As this iteration of the MINI Clubman reaches the end
+					of its cycle with the March 2023 release of the Final Edition, it
+					seems a good time to look back at the often controversial car that
+					first cemented the Clubman name.
+				</p>
+			</div>
+
+			<!-- 가로 스크롤 영역 시작 -->
+			<!-- 마스크 효과로 들어오기 시작 -->
+			<section id="new_clubman">
+				<ul class="new_clubman_list">
+					<li>
+						<img src="/BMW_MINI/images/new_clubman_00.png" alt="" />
+						<p class="new_clubman_text">The huge Mini family</p>
+					</li>
+					<li>
+						<img src="/BMW_MINI/images/new_clubman_01.png" alt="" />
+						<p class="new_clubman_text">The Austin Mini Countryman</p>
+					</li>
+					<li>
+						<img src="/BMW_MINI/images/new_clubman_02.png" alt="" />
+						<p class="new_clubman_text">The Wolseley Hornet</p>
+					</li>
+					<li>
+						<img src="/BMW_MINI/images/new_clubman_03.png" alt="" />
+						<p class="new_clubman_text">The Mini Clubman Estate</p>
+					</li>
+					<li>
+						<img src="/BMW_MINI/images/new_clubman_04.png" alt="" />
+						<p class="new_clubman_text">The Mini Clubman Estate</p>
+					</li>
+					<li>
+						<img src="/BMW_MINI/images/new_clubman_05.png" alt="" />
+						<p class="new_clubman_text">The 1000HL Estate</p>
+					</li>
+					<li>
+						<img src="/BMW_MINI/images/new_clubman_06.png" alt="" />
+						<p class="new_clubman_text">The 2007 MINI Clubman</p>
+					</li>
+					<li>
+						<img src="/BMW_MINI/images/new_clubman_07.png" alt="" />
+						<p class="new_clubman_text">The MINI Clubvan</p>
+					</li>
+					<li>
+						<img src="/BMW_MINI/images/new_clubman_08.png" alt="" />
+						<p class="new_clubman_text">
+							Past and Present.
+							<br />
+							The 1000HL Estate, and three versions
+							<br />
+							of the MINI Clubman Final Edition.
+						</p>
+					</li>
+				</ul>
+			</section>
+		</div>
+
+		<!-- 뉴 미니 패밀리 시작 -->
+		<section id="new_family">
+			<div id="new_mini_family_bg"></div>
+			<div id="new_mini_family_text_wrap">
+				<p class="new_mini_family_title">THE NEW MINI FAMILY</p>
+				<p class="new_mini_family_info">
+					The new MINI family is here! With this next generation we establish
+					our full commitment to electrification and the bolstered intention to
+					be kinder to the environment. In parallel, our new vehicles feature
+					the design language we call “Charismatic Simplicity”, rooted in a
+					renewed focus on the essentials. For this, and many more insights into
+					the world of the new MINI family, you are exactly where you need to
+					be.
+				</p>
+			</div>
+		</section>
+
+		<!-- 5door 영역 시작 -->
+		<section id="new_video_5door_wrap">
+			<video class="new_video_5door" autoplay muted loop>
+				<source
+					src="/BMW_MINI/video/remake.The New MINI Cooper 5-Door The Urban All-Rounder. - 1080.mp4"
+					type="video/mp4"
+				/>
+			</video>
+		</section>
+
+		<section id="new_5door_info_wrap">
+			<div class="new_5door_info">
+				<div id="new_5door_title_wrap">
+					<p class="new_5door_title">
+						THE NEW
+						<span>MINI COOPER 5-DOOR.</span>
+					</p>
+					<p class="new_5door_subtitle">PURE COOPER CHARISMA.</p>
+				</div>
+				<p class="new_5door_text">
+					The MINI Cooper 5-Door puts a spacious spin on our original icon. With
+					its
+					<br />
+					iconic, compact design and low centre-of-gravity, the MINI Cooper
+					5-Door lets
+					<br />
+					you get more in it – and out of it. You enjoy the renowned agile MINI
+					<br />
+					performance and handling, plus extra doors and space in the back.
+				</p>
+			</div>
+		</section>
+
+		<section id="new_5door_img_wrap"></section>
+
+		<section class="new_5door_intro_wrap">
+			<div class="new_5door_intro">
+				<div class="new_5door_intro_text_wrap">
+					<p class="new_5door_intro_title first">
+						JUMP IN.
+						<br />
+						<span>LOOK AROUND.</span>
+					</p>
+					<p class="new_5door_intro_text">
+						Get in and get comfortable. The clean design and premium materials
+						provide a welcoming feeling of space. And with everything you need
+						at the touch of the OLED display, the five toggle switches and the
+						optional Head-Up Display, you might not want to get out again. The
+						iconic, 240 mm centre display in high-quality glass is both your
+						instrument cluster and your onboard infotainment and assistance hub.
+						It’s also the first circular OLED display in the world. Use it to
+						switch between Experience Modes, each with their own distinctive
+						design, ambient lighting, and soundscape – so you can redefine your
+						cockpit's look and feel whenever you like. And let’s not forget,
+						space is of the essence. The new MINI Cooper 5-Door interior offers
+						more room for family and cargo: if you drop the rear seats you get
+						up to 925 litres of boot space.
+					</p>
+				</div>
+				<img
+					class="new_5door_intro_img"
+					src="/BMW_MINI/images/5door_intro0.png"
+					alt=""
+				/>
+			</div>
+		</section>
+
+		<section class="new_5door_intro_wrap">
+			<div class="new_5door_intro">
+				<img
+					class="new_5door_intro_img"
+					src="/BMW_MINI/images/5door_intro1.png"
+					alt=""
+				/>
+				<div class="new_5door_intro_text_wrap">
+					<p class="new_5door_intro_title second">
+						THE URBAN
+						<br />
+						<span>ALL-ROUNDER.</span>
+					</p>
+					<p class="new_5door_intro_text">
+						From awesome to artful, it’s MINI from any angle. Dynamic lines and
+						a compact silhouette combine with the wide track and short overhangs
+						to give the new MINI Cooper 5-Door its athletic presence and modern
+						appearance. This is brilliantly punctuated by the iconic, round
+						adaptive front lights and aerodynamically optimised grill. In
+						addition to the powerful, standard LED technology, optional
+						cornering lights give you better side visibility. Plus, there are
+						three different light-signatures to choose from. Customise your
+						welcome and goodbye staging to match your mood with three optional
+						front and rear light-signatures, as well as a logo projection from
+						both side mirrors. And for the cherry on top: the expressive MINI
+						multitone roof combines sleek, gradient tones to make your MINI as
+						unique as you.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<section id="new_5door_detail_wrap">
+			<ul class="new_5door_detail_list">
+				<li><img src="/BMW_MINI/images/5door_detail00.png" alt="" /></li>
+				<li><img src="/BMW_MINI/images/5door_detail01.png" alt="" /></li>
+				<li><img src="/BMW_MINI/images/5door_detail02.png" alt="" /></li>
+			</ul>
+		</section>
+		<!-- 5door 영역 끝 -->
+
+		<!-- 슬로건 시작 -->
+		<section id="slogan_home_wrap">
+			<section id="slogan_is_wrap" class="slogan_box">
+				<img id="slogan_is_img" src="/BMW_MINI/images/slogan1.png" alt="" />
+				<p>
+					Is It
+					<span>Love</span>
+					?
+				</p>
+			</section>
+			<section id="slogan_big_wrap" class="slogan_box">
+				<img id="slogan_big_img" src="/BMW_MINI/images/slogan2.png" alt="" />
+				<p>
+					BIG
+					<span>Love</span>
+				</p>
+			</section>
+			<section id="slogan_nice_wrap" class="slogan_box">
+				<img id="slogan_nice_img" src="/BMW_MINI/images/slogan3.png" alt="" />
+				<p>Nice to Meet You Again</p>
+			</section>
+		</section>
+		<!-- 슬로건 끝 -->
+
+		<!-- JWC 디테일 가로스크롤 시작 -->
+		<section id="jcw_big_wrap">
+			<section id="jcw_wrap">
+				<div id="jcw_main_wrap">
+					<div id="jcw_main_text_wrap">
+						<div id="jcw_main_title_wrap">
+							<p id="jcw_main_title">THE NEW MINI JOHN COOPER WORKS PACK.</p>
+							<p id="jcw_sub_title">A RACING SPIRIT RUNS IN THE FAMILY.</p>
+						</div>
+						<p id="jcw_sub_text">
+							For drivers who demand the ultimate in performance engineering and
+							styling, the MINI John Cooper Works range is our most powerful
+							performance option inspired by MINIs racetrack heritage. Just like
+							we have in our multiple victories at Monte Carlo, Daytona, and
+							Watkins Glen. Getting behind the wheel of a MINI John Cooper Works
+							celebrates our winning history with the thrilling MINI drive
+							you’ve come to expect.
+						</p>
+					</div>
+					<img id="jcw_main_img" src="/BMW_MINI/images/JCW_main_2.png" alt="" />
+				</div>
+
+				<div class="jcw_detail_box">
+					<div class="jcw_detail_text_box">
+						<p class="jcw_detail_title">
+							THE FIRST-EVER ALL-ELECTRIC MINI JOHN COOPER WORKS.
+						</p>
+						<p class="jcw_detail_text">
+							MINI John Cooper Works has always been in a league of its own. And
+							now with instant torque, breathtaking acceleration and thrilling
+							dynamics, the all-electric MINI JCW is go-kart feeling elevated to
+							new electrifying extremes.
+						</p>
+					</div>
+					<img
+						class="jcw_detail_img"
+						src="/BMW_MINI/images/JCW_img_1.png"
+						alt=""
+					/>
+				</div>
+
+				<div class="jcw_detail_box">
+					<div class="jcw_detail_text_box">
+						<p class="jcw_detail_title">
+							THE FIRST-EVER ALL-ELECTRIC MINI JOHN COOPER WORKS ACEMAN.
+						</p>
+						<p class="jcw_detail_text">
+							Our new crossover model strikes the ideal balance between power,
+							thrilling response and playful handling. Its sporty agility and
+							outstanding dynamics are emphasised by the direct steering feel.
+							And the contemporary interior provides space for five comfortable
+							seats.
+						</p>
+					</div>
+					<img
+						class="jcw_detail_img"
+						src="/BMW_MINI/images/JCW_img_2.png"
+						alt=""
+					/>
+				</div>
+
+				<div class="jcw_detail_box">
+					<div class="jcw_detail_text_box">
+						<p class="jcw_detail_title">THE NEW MINI JOHN COOPER WORKS.</p>
+						<p class="jcw_detail_text">
+							It’s bolder. It’s faster. It’s back, and ready to test your
+							limits. With its commanding stance and distinctive low growl, the
+							new MINI JCW represents the epitome of individual style and
+							impressive go-kart driving performance.
+						</p>
+					</div>
+					<img
+						class="jcw_detail_img"
+						src="/BMW_MINI/images/JCW_img_3.png"
+						alt=""
+					/>
+				</div>
+
+				<div class="jcw_detail_box">
+					<div class="jcw_detail_text_box">
+						<p class="jcw_detail_title">
+							THE NEW MINI JOHN COOPER WORKS CONVERTIBLE.
+						</p>
+						<p class="jcw_detail_text">
+							Experience the sheer exhilaration of a convertible that offers
+							superb levels of handling and technology. It takes the spirit of
+							roof-up, wind-in-your-hair driving excitement to the next level.
+							Classic MINI go-kart feeling, agility and open-topped magnificence
+							come standard.
+						</p>
+					</div>
+					<img
+						class="jcw_detail_img"
+						src="/BMW_MINI/images/JCW_img_4.png"
+						alt=""
+					/>
+				</div>
+
+				<div class="jcw_detail_box">
+					<div class="jcw_detail_text_box">
+						<p class="jcw_detail_title">
+							THE MINI JOHN COOPER WORKS COUNTRYMAN ALL4.
+						</p>
+						<p class="jcw_detail_text">
+							Our largest and fastest MINI model is as versatile as it is
+							powerful. TwinPower Turbo technology combines with the intelligent
+							ALL4 all-wheel drive to give superb acceleration, handling,
+							response and traction. And its muscular contours command attention
+							while you command any terrain.
+						</p>
+					</div>
+					<img
+						class="jcw_detail_img"
+						src="/BMW_MINI/images/JCW_img_5.png"
+						alt=""
+					/>
+				</div>
+			</section>
+		</section>
+		<!-- JCW 디테일 끝 -->
+
+		<!-- JWC 영상 시작 -->
+		<section id="jwc_video_wrap">
+			<video id="jwc_video" autoplay muted loop>
+				<source src="/BMW_MINI/video/mini-JCW-family-video.mp4" />
+			</video>
+		</section>
+		<!-- JWC 영상 끝 -->
+
+		<!-- footer -->
+		<footer>
+			<ul id="footer_list">
+				<li><a href="">Legal</a></li>
+				<li><a href="">Cookies</a></li>
+				<li><a href="">Imprint</a></li>
+				<li><a href="">Contact</a></li>
+				<li><a href="">Reach</a></li>
+				<li><a href="">EU Battery Regulation</a></li>
+			</ul>
+
+			<div id="copyright">
+				<img
+					id="footer_logo"
+					src="/BMW_MINI/images/footer_logo.png"
+					alt="로고"
+				/>
+				<p id="footer_text">ⓒMINI 2024</p>
+			</div>
+		</footer>
+	</body>
+</html>
